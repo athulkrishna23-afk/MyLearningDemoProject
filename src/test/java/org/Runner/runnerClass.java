@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features ="C:\\Automation\\OragneHrm\\src\\test\\resources\\features\\addItemsToCartandRemoveandPlaceOrder.feature",
+@CucumberOptions(features ="C:\\Automation\\OragneHrm\\src\\test\\resources\\features\\createOrder.feature",
 glue= {"org.stepdefinition"},
  publish = true,
 plugin= {"pretty",
