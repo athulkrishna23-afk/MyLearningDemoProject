@@ -9,4 +9,4 @@ Feature: Add and Remove from Cart functionality of Swag Labs
     Then Item is added to Cart and the User is able to verify that the Button changes to Remove
     When User clicks on remove from cart button
     Then Item is removed and user is able to verify
-#    And Test
+
