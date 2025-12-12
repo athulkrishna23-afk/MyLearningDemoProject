@@ -34,7 +34,7 @@ public class SwagLoginPage extends BaseClass {
     @FindBy (xpath = "(//button[@class='btn btn_secondary btn_small btn_inventory '])[1]")
     public WebElement removeFromCart;
 
-    @FindBy(id = "remove-sauce-labs-bik-light")
+    @FindBy(id = "remove-sauce-labs-bike-light")
     public WebElement removefromCart2;
 
     @FindBy(xpath="//a[@class='shopping_cart_link']")

@@ -1,14 +1,11 @@
 package org.stepdefinition;
 
 import com.pages.SwagLoginPage;
-import io.cucumber.java.PendingException;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.utils.BaseClass;
-import org.utils.utilities;
-
 import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 
 public class placeOrder extends BaseClass {
 
@@ -23,30 +20,20 @@ public class placeOrder extends BaseClass {
 
     @Then("Item is added to cart")
     public void item_is_added_to_cart() throws IOException {
-//        utilities.screenShot("D:\\Swag Labs");
-
+        createOrder = new SwagLoginPage(driver);
+        String cart = createOrder.cartIcon.getText();
+        assertEquals("Cart is empty even after adding item", "1", cart);
     }
 
     @When("User clicks on Cart icon")
     public void user_clicks_on_cart_icon() {
-        createOrder = new SwagLoginPage(driver);
         createOrder.cartIcon.click();
     }
-
-//    @Then("User is taken to the cart")
-//    public void user_is_taken_to_the_cart() throws IOException {
-//       utilities.screenShot("D:\\Swag Labs");
-//    }
 
     @When("User clicks on Checkout button")
     public void user_clicks_on_checkout_button() {
        createOrder.checkoutButton.click();
     }
-
-//    @Then("User is taken to Information page")
-//    public void user_is_taken_to_information_page() throws IOException {
-//       utilities.screenShot("D:\\Swag Labs");
-//    }
 
     @When("User Enters First name as {string}")
     public void user_enters_first_name_as(String string) {
@@ -68,21 +55,9 @@ public class placeOrder extends BaseClass {
        createOrder.continueButton.click();
     }
 
-//    @Then("User is taken to Payment information page")
-//    public void user_is_taken_to_payment_information_page() throws IOException {
-//       utilities.screenShot("D:\\Swag Labs");
-//    }
-
     @When("User clicks on Fininsh button")
     public void user_clicks_on_fininsh_button() {
         createOrder.finishButton.click();
     }
-
-
-
-//    @Then("Order is placed")
-//    public void order_is_placed() throws IOException {
-//        utilities.screenShot("D:\\Swag Labs");
-//    }
 
 }
