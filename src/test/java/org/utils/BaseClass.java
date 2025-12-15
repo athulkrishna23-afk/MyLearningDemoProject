@@ -7,6 +7,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.File;
@@ -22,7 +23,8 @@ public class BaseClass {
 	
 
 	public static void initializerDriverandloadurl(String url) {
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
        // System.setProperty("webdriver.edge.driver","src/test/resources/drivers/msedgedriver.exe");
 //        driver = new EdgeDriver();
 		System.out.println(driver);		
