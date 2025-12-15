@@ -22,9 +22,9 @@ public class BaseClass {
 	
 
 	public static void initializerDriverandloadurl(String url) {
-		//driver = new ChromeDriver();
-        System.setProperty("webdriver.edge.driver","src/test/resources/drivers/msedgedriver.exe");
-        driver = new EdgeDriver();
+		driver = new ChromeDriver();
+       // System.setProperty("webdriver.edge.driver","src/test/resources/drivers/msedgedriver.exe");
+//        driver = new EdgeDriver();
 		System.out.println(driver);		
 		driver.manage().window().maximize();
 		
