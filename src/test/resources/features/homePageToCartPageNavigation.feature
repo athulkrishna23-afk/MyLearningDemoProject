@@ -9,3 +9,4 @@ Feature: Navigate from Cart Page to Product Page by clicking Continue shopping
     When User clicks on Cart icon
     And User Clicks on continue shopping button
     Then User is taken to the product page
+#    And User is
